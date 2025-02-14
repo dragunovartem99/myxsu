@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source urls
+source ./urls
 
-template=template.html
-out_dir=dist
+template="template.html"
+out_dir="dist"
 
 make_page() {
 	local short_url=$1
