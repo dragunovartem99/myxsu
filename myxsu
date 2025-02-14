@@ -18,6 +18,6 @@ make_page() {
 
 empty_dir $out_dir
 
-for key in "${!urls[@]}";
+for key in ${!urls[@]};
 	do make_page $key ${urls[$key]};
 done
