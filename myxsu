@@ -1,0 +1,16 @@
+#!/bin/bash
+
+source urls
+
+template=template.html
+out_dir=dist
+
+make_page() {
+	local short_url=$1
+	local full_url=$2
+	sed "s|URL|$full_url|g" $template > "$out_dir/$short_url.html"
+}
+
+rm -rf $out_dir && mkdir $out_dir
+
+for key in "${!urls[@]}"; do make_page $key ${urls[$key]}; done
