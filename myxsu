@@ -13,7 +13,7 @@ empty_dir() {
 make_page() {
 	local short_url=$1
 	local full_url=$2
-	sed "s|URL|$full_url|g" $template > "$out_dir/$short_url.html"
+	sed "s|{url}|$full_url|g" $template > "$out_dir/$short_url.html"
 }
 
 empty_dir $out_dir
