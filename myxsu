@@ -1,18 +1,20 @@
 #!/bin/bash
 
-source "./urls"
-redirect_template="template.html"
-landing_files=("index.html" "mascot.png")
+source urls
+template="redirect.html"
+landing_dir="landing"
 out_dir="dist"
 
 generate_page() {
 	local short_url=$1
 	local full_url=$2
-	sed "s|{url}|$full_url|g" $redirect_template > "$out_dir/$short_url.html"
+	sed "s|{url}|$full_url|g" $template > "$out_dir/$short_url.html"
 }
 
 rm -rf $out_dir && mkdir $out_dir
 
-for file in ${landing_files[@]}; do cp $file $out_dir; done
-	
-for key in ${!urls[@]}; do generate_page $key ${urls[$key]}; done
+cp $landing_dir/* $out_dir
+
+for key in ${!urls[@]};
+	do generate_page $key ${urls[$key]};
+done
