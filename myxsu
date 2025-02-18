@@ -2,7 +2,7 @@
 
 source urls
 template="redirect.html"
-landing_dir="landing"
+public_dir="public"
 out_dir="dist"
 
 generate_page() {
@@ -13,7 +13,7 @@ generate_page() {
 
 rm -rf $out_dir && mkdir $out_dir
 
-cp $landing_dir/* $out_dir
+cp $public_dir/* $out_dir
 
 for key in ${!urls[@]};
 	do generate_page $key ${urls[$key]};
