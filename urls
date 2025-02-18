@@ -2,6 +2,5 @@
 
 declare -A urls=(
 	[me]=https://github.com/dragunovartem99
-	[mail]=mailto:dragunovartem99@gmail.com
 )
 
