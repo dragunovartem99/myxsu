@@ -2,5 +2,6 @@
 
 declare -A urls=(
 	[me]=https://github.com/dragunovartem99
+	[git]=https://github.com/dragunovartem99/myxsu
 )
 
