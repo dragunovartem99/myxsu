@@ -23,7 +23,7 @@ declare -A urls=(
 
 Here, `git` key is the _alias_ (key), and https://github.com/dragunovartem99/myxsu is the _full link_ (value)
 
-It means that https://myx.su/git will redirect to the full link. You can try it right now 😉
+It means that [myx.su/git](https://myx.su/git) will redirect to the full link. You can try it right now 😉
 
 ## Automation under the hood
 
@@ -35,6 +35,6 @@ Steps 1 and 2 are simple. `myxsu` iterates over the aliases in `urls` and:
 - replaces the `{url}` placeholder in the [redirect.html](./redirect.html) template with the full link
 - creates a new HTML file with the alias as its name
 
-For the `git` key, it will create [git.html](https://github.com/dragunovartem99/myxsu/blob/gh-pages/git.html)
+For the `git` alias, it will create [git.html](https://github.com/dragunovartem99/myxsu/blob/gh-pages/git.html)
 
-You can examine the final `dist` on this branch: https://github.com/dragunovartem99/myxsu/tree/gh-pages 
+You can examine the final `dist` on this branch: [gh-pages](https://github.com/dragunovartem99/myxsu/tree/gh-pages)
