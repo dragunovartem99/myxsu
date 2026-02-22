@@ -1,7 +1,6 @@
 #!/bin/bash
 
-declare -A urls=(
-	[me]=https://github.com/dragunovartem99
-	[git]=https://github.com/dragunovartem99/myxsu
+export -A urls=(
+	["me"]=https://github.com/dragunovartem99
+	["git"]=https://github.com/dragunovartem99/myxsu
 )
-

@@ -17,7 +17,7 @@ In Bash, these [are called](https://www.gnu.org/software/bash/manual/html_node/A
 # this serves as a poor man's database
 
 declare -A urls=(
-	[git]=https://github.com/dragunovartem99/myxsu
+	["git"]=https://github.com/dragunovartem99/myxsu
 )
 ```
 

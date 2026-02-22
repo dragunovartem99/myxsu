@@ -15,6 +15,6 @@ rm -rf $out_dir && mkdir $out_dir
 
 cp $public_dir/* $out_dir
 
-for key in ${!urls[@]};
-	do generate_page $key ${urls[$key]};
+for key in "${!urls[@]}"; do
+	generate_page "$key" "${urls[$key]}"
 done
