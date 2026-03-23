@@ -3,5 +3,5 @@
 export -A urls=(
 	["me"]=https://github.com/dragunovartem99
 	["git"]=https://github.com/dragunovartem99/myxsu
-	["puzz"]=https://dragunovartem99.github.io/puzzfinder/
+	["puzzles"]=https://dragunovartem99.github.io/puzzfinder
 )
