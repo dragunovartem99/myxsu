@@ -10,8 +10,7 @@ Project is fully based on the [genius idea](https://github.com/yegor256/jttu) by
 
 ## How to use it?
 
-We have key-value pair data structure in [`urls`](./urls)  
-In Bash, these [are called](https://www.gnu.org/software/bash/manual/html_node/Arrays.html) "associative arrays"  
+All redirects are defined in [`urls`](./urls), as a Bash [associative array](https://www.gnu.org/software/bash/manual/html_node/Arrays.html):
 
 ```bash
 # this serves as a poor man's database
@@ -21,20 +20,20 @@ export -A urls=(
 )
 ```
 
-Here, `git` key is the _alias_ (key), and https://github.com/dragunovartem99/myxsu is the _full link_ (value)
+Each entry maps a `short_url` (key) to a `full_url` (value)
 
-It means that [myx.su/git](https://myx.su/git) will redirect to the full link. You can try it right now 😉
+So `git` here means that [myx.su/git](https://myx.su/git) redirects to https://github.com/dragunovartem99/myxsu. Try it 😉
 
 ## Automation under the hood
 
-1. For every entry in `urls`, a new HTML file is created
-2. Each HTML file is based on [redirect.html](./redirect.html) template
-3. This HTML file redirects user via JavaScript (with fallback mechanisms)
+For each `short_url` → `full_url` pair in `urls`, [`myxsu`](./myxsu):
 
-Steps 1 and 2 are simple. `myxsu` iterates over the aliases in `urls` and:
-- replaces the `{url}` placeholder in the [redirect.html](./redirect.html) template with the full link
-- creates a new HTML file with the alias as its name
+1. takes the [redirect.html](./redirect.html) template
+2. replaces its `{url}` placeholder with `full_url`
+3. saves the result as `short_url.html` in the `out_dir` (`dist`)
 
-For the `git` alias, it will create [git.html](https://github.com/dragunovartem99/myxsu/blob/gh-pages/git.html)
+The generated `redirect.html` redirects the user via JavaScript, with fallback mechanisms
 
-You can examine the final `dist` on this branch: [gh-pages](https://github.com/dragunovartem99/myxsu/tree/gh-pages)
+For example, the `git` entry produces [git.html](https://github.com/dragunovartem99/myxsu/blob/gh-pages/git.html)
+
+You can see the generated `dist` on the [gh-pages](https://github.com/dragunovartem99/myxsu/tree/gh-pages) branch
