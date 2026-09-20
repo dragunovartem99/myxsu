@@ -3,6 +3,7 @@
 export -A urls=(
 	["me"]=https://github.com/dragunovartem99
 	["git"]=https://github.com/dragunovartem99/myxsu
-	["puzzles"]=https://dragunovartem99.github.io/puzzfinder
+	["puzz"]=https://dragunovartem99.github.io/puzzfinder
 	["layr"]=https://chromewebstore.google.com/detail/jpdnldokhgdpipodhghfpccajafienfi
+	["cookd"]=https://dragunovartem99.github.io/cookd
 )
