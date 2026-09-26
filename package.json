@@ -1,0 +1,7 @@
+{
+	"name": "myxsu",
+	"private": true,
+	"scripts": {
+		"build": "bash myxsu"
+	}
+}

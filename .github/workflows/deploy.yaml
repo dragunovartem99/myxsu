@@ -1,24 +1,18 @@
-name: Deploy to GitHub Pages
+name: Deploy
 
 on:
     push:
-        branches:
-            - main
+        branches: ["main"]
+    workflow_dispatch:
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
 
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
-
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v6
-
-            - name: Run myxsu.sh script
-              run: chmod +x myxsu && ./myxsu
-
-            - name: Deploy to GitHub Pages
-              uses: peaceiris/actions-gh-pages@v4
-              with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./dist
-                  publish_branch: gh-pages
+    pipes:
+        uses: dragunovartem99/pipes/.github/workflows/deploy-github.yaml@v1.2.0
+        with:
+            build-command: build
+            dist-folder: ./dist

@@ -1,0 +1,11 @@
+name: CI
+
+on:
+    pull_request:
+        branches: ["main"]
+
+jobs:
+    pipes:
+        uses: dragunovartem99/pipes/.github/workflows/ci-node.yaml@v1.2.0
+        with:
+            checks: '["build"]'
