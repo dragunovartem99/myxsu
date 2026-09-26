@@ -34,6 +34,8 @@ For each `short_url` → `full_url` pair in `urls`, [`myxsu`](./myxsu):
 
 The generated `redirect.html` redirects the user via JavaScript, with fallback mechanisms
 
-For example, the `git` entry produces [git.html](https://github.com/dragunovartem99/myxsu/blob/gh-pages/git.html)
+For example, the `git` entry produces `git.html`
 
-You can see the generated `dist` on the [gh-pages](https://github.com/dragunovartem99/myxsu/tree/gh-pages) branch
+## Deployment
+
+Every push to `main` runs `npm run build` and publishes `dist` to GitHub Pages
