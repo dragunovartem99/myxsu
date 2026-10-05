@@ -10,4 +10,5 @@ jobs:
         with:
             # shfmt isn't on the runner image; shellcheck is
             install: sudo apt-get install -y shfmt
+            runner: make
             checks: '["fmt-check", "lint", "build"]'
