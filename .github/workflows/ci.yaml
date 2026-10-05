@@ -8,4 +8,6 @@ jobs:
     pipes:
         uses: dragunovartem99/pipes/.github/workflows/ci-checks.yaml@v3.0.0
         with:
-            checks: '["lint", "build"]'
+            # shfmt isn't on the runner image; shellcheck is
+            before: sudo apt-get install -y shfmt
+            checks: '["fmt-check", "lint", "build"]'
