@@ -6,6 +6,6 @@ on:
 
 jobs:
     pipes:
-        uses: dragunovartem99/pipes/.github/workflows/ci-node.yaml@v2.0.0
+        uses: dragunovartem99/pipes/.github/workflows/ci-node.yaml@v3.0.0
         with:
             checks: '["build"]'

@@ -12,7 +12,7 @@ permissions:
 
 jobs:
     pipes:
-        uses: dragunovartem99/pipes/.github/workflows/deploy-github.yaml@v2.0.0
+        uses: dragunovartem99/pipes/.github/workflows/deploy-github.yaml@v3.0.0
         with:
             build-command: build
             dist-folder: ./dist
