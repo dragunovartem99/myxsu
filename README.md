@@ -38,4 +38,4 @@ For example, the `git` entry produces `git.html`
 
 ## Deployment
 
-Every push to `main` runs `npm run build` and publishes `dist` to GitHub Pages
+Every push to `main` runs `make build` and publishes `dist` to GitHub Pages
