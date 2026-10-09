@@ -6,7 +6,7 @@ on:
 
 jobs:
     pipes:
-        uses: dragunovartem99/pipes/.github/workflows/ci-checks.yaml@v3.0.0
+        uses: dragunovartem99/pipes/.github/workflows/ci-checks.yaml@v3.1.0
         with:
             # shfmt isn't on the runner image; shellcheck is
             install: sudo apt-get install -y shfmt
